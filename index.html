@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" id="html-tag">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment Portal for Skyler Benedict in WDD 230</title>
-    <meta name="description"
-        content="Assignment portal for Skyler Benedict in WDD 230: Web Frontend Development at BYU - Idaho">
+    <meta name="description" content="Assignment portal for Skyler Benedict in WDD 230: Web Frontend Development at BYU - Idaho">
     <link rel="stylesheet" href="styles/index.css">
 </head>
 
@@ -49,7 +47,18 @@
         <p>&copy;<span id="currentYear"></span> Skyler Benedict</p>
         <p>Last updated: <span id="lastUpdated"></span></p>
     </footer>
+
+    <script>
+    
+        const lastUpdated = new Date(document.lastModified);
+
+        const lastUpdatedString = `${lastUpdated.getMonth()+1}/${lastUpdated.getDate()}/${lastUpdated.getFullYear()}`;
+
+    
+        const lastUpdatedSpan = document.getElementById("lastUpdated");
+        lastUpdatedSpan.textContent = lastUpdatedString;
+    </script>
+
     <script src="./scripts/main.js"></script>
 </body>
-
 </html>
