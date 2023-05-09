@@ -15,6 +15,7 @@
 <body>
   <header>
     <h1>Design Principles</h1>
+    <h2>Skyler Benedict</h2>
   </header>
   <main>
     <section>
@@ -42,7 +43,21 @@
         a clear visual structure and helps users understand the information hierarchy.</p>
     </section>
   </main>
-  <script src="js/scripts.js"></script>
+  <footer>
+    <p>&copy; 2023<span id="currentYear"></span> Skyler Benedict</p>
+    <p>Last updated: <span id="lastUpdated"></span></p>
+</footer>
+
+<script>
+
+    const lastUpdatedString = "May 8, 2023";
+
+
+    const lastUpdatedSpan = document.getElementById("lastUpdated");
+    lastUpdatedSpan.textContent = lastUpdatedString;
+</script>
+
+<script src="./scripts/main.js"></script>
 </body>
 
 </html>
