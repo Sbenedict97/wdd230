@@ -16,7 +16,7 @@
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Assignments</a></li>
-                <li><a href="#">Resources</a></li>
+                <li><a href="">Resources</a></li>
             </ul>
         </nav>
         <div class="header-content">
@@ -30,9 +30,9 @@
     <main>
         <h1>Assignments</h1>
         <ul>
-            <li><a href="/lesson2/jv/design-principles.html">Lesson 2</a></li>
-            <li><a href="/lesson3/"> Carlsbad Chamber of Commerce </a>>Lesson 3</a></li>
-            <li><a href="/chamber/scripts/index.html">Lesson 4</a></li>
+            <li><a href="lesson2/jv/design-principles.html">Lesson 2</a></li>
+            <li><a href="lesson3/jv/"> Carlsbad Chamber of Commerce </a>>Lesson 3</a></li>
+            <li><a href="chamber/scripts/index.html">Lesson 4</a></li>
             <li><a href="#">Lesson 5</a></li>
             <li><a href="#">Lesson 6</a></li>
             <li><a href="#">Lesson 7</a></li>
@@ -51,11 +51,15 @@
     </footer>
 
     <script>
-
-        const lastUpdatedString = "May 13, 2023";
-
+        const currentYearSpan = document.getElementById("currentYear");
+        currentYearSpan.textContent = new Date().getFullYear();
 
         const lastUpdatedSpan = document.getElementById("lastUpdated");
+        const lastUpdatedString = new Date().toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        });
         lastUpdatedSpan.textContent = lastUpdatedString;
     </script>
 

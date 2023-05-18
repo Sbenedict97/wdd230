@@ -1,7 +1,7 @@
-/* CSS Normalize */
+
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
-/* Font Styling */
+
 body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
@@ -17,7 +17,6 @@ h1, h2 {
   color: #333;
 }
 
-/* Layout with CSS Grid */
 main {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -38,7 +37,7 @@ main {
   }
 }
 
-/* Styling for Each Section */
+
 section {
   border: 1px solid #ccc;
   padding: 1.5rem;
@@ -60,7 +59,7 @@ section p {
   color: #555;
 }
 
-/* Color Overrides */
+
 body {
   color: #444;
 }
