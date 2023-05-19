@@ -1,0 +1,19 @@
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .input-section {
+    margin-bottom: 10px;
+  }
+  
+  #chapter-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .delete-button {
+    color: red;
+    cursor: pointer;
+  }
+  
