@@ -1,9 +1,9 @@
-// script.js
+
 const chapterInput = document.getElementById('chapter-input');
 const addButton = document.getElementById('add-button');
 const chapterList = document.getElementById('chapter-list');
 
-addButton.addEventListener('click', function() {
+addButton.addEventListener('click', function () {
   const chapterText = chapterInput.value.trim();
 
   if (chapterText !== '') {
@@ -14,7 +14,7 @@ addButton.addEventListener('click', function() {
     deleteButton.textContent = '❌';
     deleteButton.classList.add('delete-button');
 
-    deleteButton.addEventListener('click', function() {
+    deleteButton.addEventListener('click', function () {
       listItem.remove();
       chapterInput.focus();
     });
