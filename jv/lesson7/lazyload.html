@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lazy Load Images</title>
+    <link rel="stylesheet" type="text/css" href="style/lazyload.css">
+    <script src="script/lazyload.js" defer></script>
+</head>
+
+<body>
+    <h1>Lazy Load Images</h1>
+    <div class="image-container">
+        <picture>
+            <source data-srcset="lesson-7/image1.jpg" media="none" class="lazy-image">
+            <img src="images/image1.jpg" alt="Image 1" width="300" height="400">
+        </picture>
+        <picture>
+            <source data-srcset="lesson-7/image2.jpg" media="none" class="lazy-image">
+            <img src="images/image2.jpg" alt="Image 2" width="300" height="400">
+        </picture>  
+        <picture>
+            <source data-srcset="lesson-7/image3.jpg" media="none" class="lazy-image">
+            <img src="images/image3.jpg" alt="Image 3" width="300" height="400">
+        </picture>
+        <picture>
+            <source data-srcset="lesson-7/image4.jpg" media="none" class="lazy-image">
+            <img src="images/image4.jpg" alt="Image 4" width="300" height="400">
+        </picture>
+        <picture>
+            <source data-srcset="lesson-7/image5.jpg" media="none" class="lazy-image">
+            <img src="images/image5.jpg" alt="Image 5" width="300" height="400">
+        </picture>
+    </div>
+</body>
+
+</html>
