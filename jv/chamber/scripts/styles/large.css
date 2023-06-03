@@ -1,3 +1,6 @@
+/* base.css */
+
+/* Reset default browser styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -174,11 +177,6 @@ ul.nav-links li a:hover {
 .weather-forecast {
   margin-left: 20px;
 }
-.forecast-day img {
-  width: 50px;
-  height: 50px;
-  margin-right: 20px;
-}
 
 .forecast-day {
   margin: 0;
@@ -224,6 +222,7 @@ ul.nav-links li a:hover {
   color: #ccc;
 }
 
+/* Media Query for min-width 1024px */
 @media screen and (min-width: 1024px) {
   ul.nav-links li {
     margin-right: 30px;
