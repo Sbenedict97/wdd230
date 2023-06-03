@@ -1,126 +1,128 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Discover</title>
-    <link rel="stylesheet" href="styles/base.css" />
-    <link rel="stylesheet" href="styles/medium.css" media="(min-width: 768px)" />
-    <link rel="stylesheet" href="styles/large.css" media="(min-width: 1024px)" />
-    <style>
-        /* Additional CSS for the discover.html page */
-        .image-gallery {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
+  <title>Discover</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/medium.css" media="(min-width: 768px)" />
+  <link rel="stylesheet" href="styles/large.css" media="(min-width: 1024px)" />
+  <style>
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
 
-        .image-gallery .image-container {
-            flex-basis: 100%;
-            margin-bottom: 20px;
-        }
+    .image-gallery .image-container {
+      flex-basis: 100%;
+      margin-bottom: 20px;
+    }
 
-        .image-gallery .image-container img {
-            max-width: 100%;
-            height: auto;
-        }
+    .image-gallery .image-container img {
+      max-width: 100%;
+      height: auto;
+    }
 
-        .image-gallery .image-container p {
-            margin: 10px 0;
-        }
+    .image-gallery .image-container p {
+      margin: 10px 0;
+    }
 
-        .image-gallery .image-container:hover {
-            filter: brightness(70%);
-        }
-    </style>
+    .image-gallery .image-container:hover {
+      filter: brightness(70%);
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <div class="header-container">
-          <div class="logo-container">
-            <img src="images/chamberlogo.webp" alt="Chamber of Commerce logo" onerror="this.src='images/chamberlogo.png';" />
-            <h1 class="site-name">Chamber of Commerce</h1>
-          </div>      
-          <nav>
-            <ul class="nav-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="discover.html">Discover</a></li>
-              <li><a href="#">Events</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-            <div class="social-media-links">
-              <a href="images/facebook.png"><img src="images/facebook.png" alt="Facebook icon" /></a>
-              <a href="images/twitter.png"><img src="images/twitter.png" alt="Twitter icon" /></a>
-            </div>
-            <div class="hamburger-menu">
-              <span class="hamburger-bar"></span>
-              <span class="hamburger-bar"></span>
-              <span class="hamburger-bar"></span>
-            </div>
-          </nav>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="images/chamberlogo.webp" alt="Chamber of Commerce logo"
+          onerror="this.src='images/chamberlogo.png';" />
+        <h1 class="site-name">Chamber of Commerce</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="social-media-links">
+          <a href="images/facebook.png"><img src="images/facebook.png" alt="Facebook icon" /></a>
+          <a href="images/twitter.png"><img src="images/twitter.png" alt="Twitter icon" /></a>
         </div>
-      </header>
-    <h1>Discover</h1>
-
-    <div class="image-gallery">
-        <div class="image-container">
-            <img src="image1.jpg" alt="Image 1">
-            <p>Description of Image 1</p>
+        <div class="hamburger-menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
         </div>
-        <div class="image-container">
-            <img src="image2.jpg" alt="Image 2">
-            <p>Description of Image 2</p>
-        </div>
-        <div class="image-container">
-            <img src="image3.jpg" alt="Image 3">
-            <p>Description of Image 3</p>
-        </div>
-        <div class="image-container">
-            <img src="image4.jpg" alt="Image 4">
-            <p>Description of Image 4</p>
-        </div>
-        <div class="image-container">
-            <img src="image5.jpg" alt="Image 5">
-            <p>Description of Image 5</p>
-        </div>
+      </nav>
     </div>
-    <footer>
-        <div class="footer-container">
-          <div class="footer-section">
-            <h3 class="footer-section-title">About Us</h3>
-            <p>
-              The Chamber of Commerce is a non-profit organization dedicated to
-              promoting local businesses and supporting the community.
-            </p>
-          </div>
-          <div class="footer-section">
-            <h3 class="footer-section-title">Contact Us</h3>
-            <p>
-              Chamber of Commerce<br />
-              123 Main Street<br />
-              Anytown, USA 12345<br />
-              (555) 555-1234<br />
-              info@chamberofcommerce.com
-            </p>
-          </div>
-          <div class="footer-section">
-            <h3 class="footer-section-title">Follow Us</h3>
-            <div class="social-media-links">
-              <a href="images/facebook.png"><img src="images/facebook.png" alt="Facebook icon" /></a>
-              <a href="images/twitter.png"><img src="images/twitter.png" alt="Twitter icon" /></a>
-            </div>
-          </div>
+  </header>
+  <h1>Discover</h1>
+
+  <div class="image-gallery">
+    <div class="image-container">
+      <img src="images/d_image1.jpg" alt="Image 1" loading="lazy">
+      <p>Description of Image 1</p>
+    </div>
+    <div class="image-container">
+      <img src="images/d_image2.jpg" alt="Image 2" loading="lazy">
+      <p>Description of Image 2</p>
+    </div>
+    <div class="image-container">
+      <img src="images/d_image3.jpg" alt="Image 3" loading="lazy">
+      <p>Description of Image 3</p>
+    </div>
+    <div class="image-container">
+      <img src="images/d_image4.jpg" alt="Image 4" loading="lazy">
+      <p>Description of Image 4</p>
+    </div>
+    <div class="image-container">
+      <img src="images/d_image5.jpg" alt="Image 5" loading="lazy">
+      <p>Description of Image 5</p>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3 class="footer-section-title">About Us</h3>
+        <p>
+          The Chamber of Commerce is a non-profit organization dedicated to
+          promoting local businesses and supporting the community.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-section-title">Contact Us</h3>
+        <p>
+          Chamber of Commerce<br />
+          123 Main Street<br />
+          Anytown, USA 12345<br />
+          (555) 555-1234<br />
+          info@chamberofcommerce.com
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-section-title">Follow Us</h3>
+        <div class="social-media-links">
+          <a href="images/facebook.png"><img src="images/facebook.png" alt="Facebook icon" /></a>
+          <a href="images/twitter.png"><img src="images/twitter.png" alt="Twitter icon" /></a>
         </div>
-      </footer>
+      </div>
+    </div>
+  </footer>
 
-    <script>
-        // Local storage to display time since last visit
-        const lastVisit = localStorage.getItem('lastVisit');
-        const currentTimestamp = new Date().getTime();
-        const daysSinceLastVisit = Math.round((currentTimestamp - lastVisit) / (1000 * 60 * 60 * 24));
-        localStorage.setItem('lastVisit', currentTimestamp);
+  <script>
+    const lastVisit = localStorage.getItem('lastVisit');
+    const currentTimestamp = new Date().getTime();
+    const daysSinceLastVisit = Math.round((currentTimestamp - lastVisit) / (1000 * 60 * 60 * 24));
+    localStorage.setItem('lastVisit', currentTimestamp);
 
-        const visitInfo = document.createElement('p');
-        visitInfo.textContent = `Days since last visit: ${daysSinceLastVisit}`;
-        document.body.appendChild(visitInfo);
-    </script>
+    const visitInfo = document.createElement('p');
+    visitInfo.textContent = `Days since last visit: ${daysSinceLastVisit}`;
+    document.body.appendChild(visitInfo);
+  </script>
 </body>
+
 </html>
