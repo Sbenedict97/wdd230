@@ -43,7 +43,7 @@ input[type="email"] {
 }
 video {
     width: 100%;
-    max-width: 600px;
+    max-width: 300px;
     height: auto;
 }
 footer {
