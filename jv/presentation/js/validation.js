@@ -1,14 +1,10 @@
-// validation.js
 
-// Function to validate the form
 function validateForm(event) {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault();
   
-    // Get form inputs
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
   
-    // Perform validation
     let isValid = true;
   
     if (nameInput.value.trim() === '') {
@@ -25,18 +21,15 @@ function validateForm(event) {
       emailInput.classList.remove('error');
     }
   
-    // If the form is valid, submit it
     if (isValid) {
       document.getElementById('myForm').submit();
     }
   }
   
-  // Function to validate email format
   function isValidEmail(email) {
     const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     return emailRegex.test(email);
   }
   
-  // Event listener for form submission
   document.getElementById('myForm').addEventListener('submit', validateForm);
   
