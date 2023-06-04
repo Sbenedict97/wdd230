@@ -42,8 +42,7 @@ input[type="email"] {
     font-size: 16px;
 }
 video {
-    width: 100%;
-    max-width: 300px;
+    width: 300px;
     height: auto;
 }
 footer {
