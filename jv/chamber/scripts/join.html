@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chamber of Commerce - Join Us</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" media="(min-width: 768px)" href="styles/medium.css">
+  <link rel="stylesheet" media="(min-width: 1024px)" href="styles/large.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="images/chamberlogo.webp" alt="Chamber of Commerce logo" onerror="this.src='images/chamberlogo.png';">
+        <h1 class="site-name">Chamber of Commerce</h1>
+      </div>      
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html">Join Us</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="social-media-links">
+          <a href="images/facebook.png"><img src="images/facebook.png" alt="Facebook icon"></a>
+          <a href="images/twitter.png"><img src="images/twitter.png" alt="Twitter icon"></a>
+        </div>
+        <div class="hamburger-menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Join Us</h2>
+      <form action="thankyou.html" method="post">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+
+        <label for="last-name">Last Name:</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <label for="position-title">Position Title:</label>
+        <input type="text" id="position-title" name="position-title" pattern="[A-Za-z\s-]{7,}" title="Please enter at least 7 characters of alphabets, hyphens, or spaces.">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="example@example.com">
+
+        <label for="cell-phone">Cell Phone:</label>
+        <input type="tel" id="cell-phone" name="cell-phone" required>
+
+        <label for="business-name">Business Name/Title:</label>
+        <input type="text" id="business-name" name="business-name" required>
+
+        <label for="membership-level">Membership Level:</label>
+        <select id="membership-level" name="membership-level">
+          <option value="np-membership">NP Membership (Non-profit organizations, no fee)</option>
+          <option value="bronze-membership">Bronze Membership</option>
+          <option value="silver-membership">Silver Membership</option>
+          <option value="gold-membership">Gold Membership</option>
+        </select>
+
+        <label for="business-description">Business Description:</label>
+        <textarea id="business-description" name="business-description" rows="4"></textarea>
+
+        <input type="hidden" name="form-loaded-date" value="">
+
+        <input type="submit" value="Submit">
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>The Chamber of Commerce is a non-profit organization dedicated to promoting local businesses and supporting the community.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>
+          Chamber of Commerce<br>
+          123 Main Street<br>
+          Anytown, USA 12345<br>
+          (555) 555-1234<br>
+          info@chamberofcommerce.com
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-media-links">
+          <a href="images/facebook.png"><img src="images/facebook.png" alt="Facebook icon"></a>
+          <a href="images/twitter.png"><img src="images/twitter.png" alt="Twitter icon"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="jv/windchill.js"></script>
+</body>
+</html>
