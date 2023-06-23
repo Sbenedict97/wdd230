@@ -77,27 +77,30 @@
       <h2 class="section-title">Local Weather</h2>
       <div class="weather-container">
         <div class="weather-info">
-          <img src="images/sun-icon.png" alt="Weather icon" />
-          <p class="temperature">70°F</p>
-          <p class="conditions">Sunny</p>
+          <img id="current-weather-icon" src="images/sun-icon.png" alt="Weather icon" />
+          <p id="current-temperature" class="temperature">Temperature: </p>
+          <p id="current-condition" class="conditions">Condition: </p>
+        </div>
+        
+        <div class="weather-forecast">
+          <h3 id="forecast-day-1" class="forecast-day">Today</h3>
+          <img class="forecast-icon" src="images/sun-icon.png" alt="Weather icon" />
+          <p class="forecast-temperature">High: </p>
         </div>
         <div class="weather-forecast">
-          <h3 class="forecast-day">Today</h3>
-          <img src="images/sun-icon.png" alt="Weather icon" />
-          <p class="forecast-temperature">High: 78°F, Low: 65°F</p>
+          <h3 id="forecast-day-2" class="forecast-day">Tomorrow</h3>
+          <img class="forecast-icon" src="images/partial-rain-icon.png" alt="Weather icon" />
+          <p class="forecast-temperature">High: </p>
         </div>
         <div class="weather-forecast">
-          <h3 class="forecast-day">Tomorrow</h3>
-          <img src="images/partial-rain-icon.png" alt="Weather icon" />
-          <p class="forecast-temperature">High: 70°F, Low: 62°F</p>
+          <h3 id="forecast-day-3" class="forecast-day">In Two Days</h3>
+          <img class="forecast-icon" src="images/rain-icon.png" alt="Weather icon" />
+          <p class="forecast-temperature">High: </p>
         </div>
-        <div class="weather-forecast">
-          <h3 class="forecast-day">In Two Days</h3>
-          <img src="images/rain-icon.png" alt="Weather icon" />
-          <p class="forecast-temperature">High: 68°F, Low: 56°F</p>
-        </div>
+        
       </div>
     </section>
+   
   </main>
   <footer>
     <div class="footer-container">
@@ -127,7 +130,43 @@
       </div>
     </div>
   </footer>
-  <script src="app.js"></script>
-  <script src="jv/windchill.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    const apiKey = '100e49a9aceb05797bc8884364b94d62';
+    const city = 'Fairbanks';
+
+    function fetchWeatherData() {
+      const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+
+      $.getJSON(currentWeatherUrl, function(data) {
+        const temperature = Math.round(data.main.temp);
+        const conditions = data.weather[0].description;
+        const icon = data.weather[0].icon;
+
+        $('#current-temperature').text(`Temperature: ${temperature}°F`);
+        $('#current-condition').text(`Condition: ${conditions}`);
+        $('#current-weather-icon').attr('src', `http://openweathermap.org/img/w/${icon}.png`);
+      });
+
+      const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`;
+
+      $.getJSON(forecastUrl, function(data) {
+        const forecasts = data.list;
+
+        for (let i = 0; i < 3; i++) {
+          const forecast = forecasts[i * 8];
+          const temperature = Math.round(forecast.main.temp);
+          const icon = forecast.weather[0].icon;
+
+          $(`#forecast-temperature-${i}`).text(`High: ${temperature}°F`);
+          $(`#forecast-icon-${i}`).attr('src', `http://openweathermap.org/img/w/${icon}.png`);
+        }
+      });
+    }
+
+    $(document).ready(function() {
+      fetchWeatherData();
+    });
+  </script>
 </body>
 </html>
