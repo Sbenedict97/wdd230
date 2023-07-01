@@ -1,4 +1,6 @@
+/* base.css */
 
+/* Reset default browser styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -45,7 +47,7 @@ ul.nav-links li:last-child {
 ul.nav-links li a {
   color: #fff;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -85,9 +87,8 @@ ul.nav-links li a:hover {
   height: auto;
 }
 
-
 .hero-image {
-  background-image: url('hero-image.jpg');
+  background-image: url('images/d_image3.jpg');
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -95,7 +96,9 @@ ul.nav-links li a:hover {
   align-items: center;
   text-align: center;
   color: #fff;
+  margin-top: 100px; /* Add top margin to create space */
 }
+
 
 .hero-title {
   font-size: 3em;
@@ -109,9 +112,48 @@ ul.nav-links li a:hover {
   margin-bottom: 20px;
 }
 
-.news {
+@media screen and (min-width: 768px) {
+  .header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  
+  .hero-image {
+    height: calc(100vh - 100px); /* Adjust the height as needed */
+    margin-top: 100px;
+    margin-bottom: 50px; /* Add a margin to create space at the bottom of the hero image */
+    overflow: hidden;
+  }
+  .hero-image img {
+    width: 100%;
+    height: auto;
+  }
+  .hero-title {
+    font-size: 3rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Add the following rule */
+  main {
+    padding-bottom: 100px; /* Add a padding at the bottom of the main content to make room for the hero image */
+  }
+}
+
+  .hero-description {
+    font-size: 2em;
+  }
+
+
+.news,
+.events,
+.weather {
   padding: 20px;
-  background-color: #f8f8f8;
 }
 
 .section-title {
@@ -119,35 +161,17 @@ ul.nav-links li a:hover {
   margin-bottom: 20px;
 }
 
-.news-article {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-}
-
-.article-title {
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-.events {
-  padding: 20px;
-}
-
+.news-article,
 .event {
   border-bottom: 1px solid #ccc;
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
 
+.article-title,
 .event-title {
   margin: 0;
   margin-bottom: 10px;
-}
-
-.weather {
-  background-color: #eee;
-  padding: 20px;
 }
 
 .weather-container {
@@ -167,20 +191,8 @@ ul.nav-links li a:hover {
   margin-bottom: 10px;
 }
 
-.conditions {
-  margin: 0;
-  font-size: 1.2em;
-}
-
-.weather-forecast {
-  margin-left: 20px;
-}
-
-.forecast-day {
-  margin: 0;
-  margin-bottom: 10px;
-}
-
+.conditions,
+.forecast-day,
 .forecast-temperature {
   margin: 0;
   font-size: 1.2em;
@@ -213,27 +225,14 @@ ul.nav-links li a:hover {
 .footer-links li a {
   color: #fff;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .footer-links li a:hover {
   color: #ccc;
 }
 
-
-@media screen and (min-width: 768px) {
-  ul.nav-links li {
-    margin-right: 30px;
-  }
-
-  .hero-title {
-    font-size: 4em;
-  }
-
-  .hero-description {
-    font-size: 2em;
-  }
-}
+/* Additional rules */
 #weather-summary {
   border: 1px solid #ccc;
   padding: 20px;

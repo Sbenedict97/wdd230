@@ -1,4 +1,6 @@
+/* base.css */
 
+/* Reset default browser styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -45,7 +47,7 @@ ul.nav-links li:last-child {
 ul.nav-links li a {
   color: #fff;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease;
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -85,9 +87,8 @@ ul.nav-links li a:hover {
   height: auto;
 }
 
-
 .hero-image {
-  background-image: url('hero-image.jpg');
+  background-image: url('images/d_image3.jpg');
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -95,12 +96,20 @@ ul.nav-links li a:hover {
   align-items: center;
   text-align: center;
   color: #fff;
+  margin-top: 100px;
+  overflow: hidden;
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
 }
 
 .hero-title {
   font-size: 3em;
-  margin: 0;
-  margin-bottom: 10px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .hero-description {
@@ -109,9 +118,10 @@ ul.nav-links li a:hover {
   margin-bottom: 20px;
 }
 
-.news {
+.news,
+.events,
+.weather {
   padding: 20px;
-  background-color: #f8f8f8;
 }
 
 .section-title {
@@ -119,35 +129,17 @@ ul.nav-links li a:hover {
   margin-bottom: 20px;
 }
 
-.news-article {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
-}
-
-.article-title {
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-.events {
-  padding: 20px;
-}
-
+.news-article,
 .event {
   border-bottom: 1px solid #ccc;
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
 
+.article-title,
 .event-title {
   margin: 0;
   margin-bottom: 10px;
-}
-
-.weather {
-  background-color: #eee;
-  padding: 20px;
 }
 
 .weather-container {
@@ -167,20 +159,8 @@ ul.nav-links li a:hover {
   margin-bottom: 10px;
 }
 
-.conditions {
-  margin: 0;
-  font-size: 1.2em;
-}
-
-.weather-forecast {
-  margin-left: 20px;
-}
-
-.forecast-day {
-  margin: 0;
-  margin-bottom: 10px;
-}
-
+.conditions,
+.forecast-day,
 .forecast-temperature {
   margin: 0;
   font-size: 1.2em;
@@ -213,7 +193,7 @@ ul.nav-links li a:hover {
 .footer-links li a {
   color: #fff;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .footer-links li a:hover {
@@ -233,6 +213,8 @@ ul.nav-links li a:hover {
     font-size: 2em;
   }
 }
+
+/* Additional rules */
 #weather-summary {
   border: 1px solid #ccc;
   padding: 20px;

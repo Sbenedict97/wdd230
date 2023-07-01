@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,13 +10,15 @@
   <link rel="stylesheet" media="(min-width: 768px)" href="styles/medium.css" />
   <link rel="stylesheet" media="(min-width: 1024px)" href="styles/large.css" />
 </head>
+
 <body>
   <header>
     <div class="header-container">
       <div class="logo-container">
-        <img src="images/chamberlogo.webp" alt="Chamber of Commerce logo" onerror="this.src='images/chamberlogo.png';" />
+        <img src="images/chamberlogo.webp" alt="Chamber of Commerce logo"
+          onerror="this.src='images/chamberlogo.png';" />
         <h1 class="site-name">Chamber of Commerce</h1>
-      </div>      
+      </div>
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -37,14 +40,15 @@
   </header>
   <main>
     <div class="hero-image">
-      <a href="images/wdd230-org.jpg">
-        <img src="images/wdd230-org-small.webp" srcset="images/wdd230-org-small.webp 480w,
-                     images/wdd230-org-medium.webp 768w,
-                     images/wdd230-org-large.webp 1024w" alt="City Skyline" />
+      <a href="images/d_image3.jpg">
+        <img src="images/d_image3.jpg" srcset="images/d_image3.jpg 480w, images/d_image3.jpg 768w, images/d_image3.jpg"
+          alt="City Skyline" style="max-width: 100%;" />
+
       </a>
-      <h2 class="hero-title">Welcome to the Chamber of Commerce</h2>
+      <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 1.5rem;">Welcome to the Chamber of Commerce</h2>
       <p class="hero-description">
-        Mission of the Chamber of Commerce
+        The mission of the Chamber of Commerce is to promote local businesses and support economic growth in the
+        community.
       </p>
       <button class="cta-button">Join Us</button>
     </div>
@@ -53,13 +57,13 @@
       <div class="news-article">
         <h3 class="article-title">Local Business Receives Award</h3>
         <p class="article-description">
-          Story of a local business
+          Story of a local business receiving an award.
         </p>
       </div>
       <div class="news-article">
         <h3 class="article-title">Previous Community Event</h3>
         <p class="article-description">
-          Event turnout
+          Summary of a previous community event hosted by the chamber.
         </p>
       </div>
     </section>
@@ -69,7 +73,8 @@
         <h3 class="event-title">Mixer</h3>
         <p class="event-date">June 1, 2023 at 6:00 PM</p>
         <p class="event-description">
-          Updates on upcoming event
+          Join us for an evening of networking, refreshments and door prizes. Meet other business owners and make
+          valuable connections.
         </p>
       </div>
     </section>
@@ -81,26 +86,25 @@
           <p id="current-temperature" class="temperature">Temperature: </p>
           <p id="current-condition" class="conditions">Condition: </p>
         </div>
-        
         <div class="weather-forecast">
           <h3 id="forecast-day-1" class="forecast-day">Today</h3>
           <img class="forecast-icon" src="images/sun-icon.png" alt="Weather icon" />
-          <p class="forecast-temperature">High: </p>
+          <p class="forecast-temperature">High: 85°F</p>
         </div>
         <div class="weather-forecast">
           <h3 id="forecast-day-2" class="forecast-day">Tomorrow</h3>
           <img class="forecast-icon" src="images/partial-rain-icon.png" alt="Weather icon" />
-          <p class="forecast-temperature">High: </p>
+          <p class="forecast-temperature">High: 72°F</p>
         </div>
         <div class="weather-forecast">
           <h3 id="forecast-day-3" class="forecast-day">In Two Days</h3>
           <img class="forecast-icon" src="images/rain-icon.png" alt="Weather icon" />
-          <p class="forecast-temperature">High: </p>
+          <p class="forecast-temperature">High: 68°F</p>
         </div>
-        
+
       </div>
     </section>
-   
+
   </main>
   <footer>
     <div class="footer-container">
@@ -138,7 +142,7 @@
     function fetchWeatherData() {
       const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
-      $.getJSON(currentWeatherUrl, function(data) {
+      $.getJSON(currentWeatherUrl, function (data) {
         const temperature = Math.round(data.main.temp);
         const conditions = data.weather[0].description;
         const icon = data.weather[0].icon;
@@ -150,7 +154,7 @@
 
       const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=imperial`;
 
-      $.getJSON(forecastUrl, function(data) {
+      $.getJSON(forecastUrl, function (data) {
         const forecasts = data.list;
 
         for (let i = 0; i < 3; i++) {
@@ -164,9 +168,10 @@
       });
     }
 
-    $(document).ready(function() {
+    $(document).ready(function () {
       fetchWeatherData();
     });
   </script>
 </body>
+
 </html>

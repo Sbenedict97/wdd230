@@ -1,5 +1,3 @@
-/* base.css */
-
 /* Reset default browser styles */
 body {
   font-family: Arial, sans-serif;
@@ -87,9 +85,8 @@ ul.nav-links li a:hover {
   height: auto;
 }
 
-
 .hero-image {
-  background-image: url('hero-image.jpg');
+  background-image: url('images/d_image3.jpg');
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -97,7 +94,9 @@ ul.nav-links li a:hover {
   align-items: center;
   text-align: center;
   color: #fff;
+  margin-top: 100px; /* Add top margin to create space */
 }
+
 
 .hero-title {
   font-size: 3em;
@@ -194,7 +193,6 @@ ul.nav-links li a:hover {
   padding: 20px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .footer-links {
@@ -221,21 +219,45 @@ ul.nav-links li a:hover {
 .footer-links li a:hover {
   color: #ccc;
 }
-
-/* Media Query for min-width 1024px */
 @media screen and (min-width: 1024px) {
-  ul.nav-links li {
-    margin-right: 30px;
+  .header-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
   }
-
+  
+  .hero-image {
+    height: calc(100vh - 150px); /* Adjust the height as needed */
+    margin-top: 150px;
+    margin-bottom: 75px; /* Add a margin to create space at the bottom of the hero image */
+    overflow: hidden;
+  }
+  .hero-image img {
+    width: 100%;
+    height: auto;
+  }
   .hero-title {
-    font-size: 4em;
+    font-size: 3rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
+  
+  /* Add the following rule */
+  main {
+    padding-bottom: 150px; /* Add a padding at the bottom of the main content to make room for the hero image */
+  }
+}
+
 
   .hero-description {
     font-size: 2em;
   }
-}
+
+
 #weather-summary {
   border: 1px solid #ccc;
   padding: 20px;
