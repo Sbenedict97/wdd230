@@ -1,0 +1,31 @@
+{
+    "name": "Chamber of Commerce",
+    "address": "123 Main Street, Anytown, USA 12345",
+    "phone": "(555) 555-1234",
+    "email": "info@chamberofcommerce.com",
+    "officeHours": [
+      {
+        "day": "Monday-Friday",
+        "hours": "9:00 AM - 5:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "10:00 AM - 2:00 PM"
+      },
+      {
+        "day": "Sunday",
+        "hours": "Closed"
+      }
+    ],
+    "pointsOfContact": [
+      {
+        "name": "John Smith",
+        "position": "Executive Director"
+      },
+      {
+        "name": "Mary Johnson",
+        "position": "Membership Coordinator"
+      }
+    ]
+  }
+  

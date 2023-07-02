@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Chamber of Commerce</title>
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" media="(min-width: 768px)" href="styles/medium.css" />
+  <link rel="stylesheet" media="(min-width: 1024px)" href="styles/large.css" />
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="images/chamberlogo.webp" alt="Chamber of Commerce logo"
+          onerror="this.src='images/chamberlogo.png';" />
+        <h1 class="site-name">Chamber of Commerce</h1>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html">Join Us</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="contact.html">Contact</a></li> <!-- Added Contact page link -->
+        </ul>
+        <div class="social-media-links">
+          <a href="images/facebook.png"><img src="images/facebook.png" alt="Facebook icon" /></a>
+          <a href="images/twitter.png"><img src="images/twitter.png" alt="Twitter icon" /></a>
+        </div>
+        <div class="hamburger-menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2>Welcome to the Chamber of Commerce</h2>
+        <p>Supporting local businesses and fostering community growth.</p>
+        <a href="join.html" class="cta-button">Join Us</a>
+      </div>
+    </section>
+
+    <section class="spotlight-section">
+      <h2>Spotlight Members</h2>
+      <div class="spotlight-container">
+        <!-- Spotlight members dynamically generated here -->
+      </div>
+    </section>
+
+    <section class="directory-section">
+      <h2>Member Directory</h2>
+      <div class="directory-container">
+        <!-- Member directory content goes here -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3 class="footer-section-title">About Us</h3>
+        <p>
+          The Chamber of Commerce is a non-profit organization dedicated to
+          promoting local businesses and supporting the community.
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-section-title">Contact Us</h3>
+        <p>
+          Chamber of Commerce<br />
+          123 Main Street<br />
+          Anytown, USA 12345<br />
+          (555) 555-1234<br />
+          info@chamberofcommerce.com
+        </p>
+      </div>
+      <div class="footer-section">
+        <h3 class="footer-section-title">Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html">Join Us</a></li>
+          <li><a href="directory.html">Directory</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+  <script>
+    const directoryData = [
+      {
+        "name": "Company A",
+        "status": "gold",
+        "description": "Description of Company A"
+      },
+      {
+        "name": "Company B",
+        "status": "silver",
+        "description": "Description of Company B"
+      },
+      {
+        "name": "Company C",
+        "status": "silver",
+        "description": "Description of Company C"
+      }
+      // Add more member objects as needed
+    ];
+
+    function getRandomMembers(numMembers) {
+      const goldMembers = directoryData.filter(member => member.status === "gold");
+      const silverMembers = directoryData.filter(member => member.status === "silver");
+      const randomGoldMembers = getRandomElements(goldMembers, numMembers);
+      const randomSilverMembers = getRandomElements(silverMembers, numMembers - randomGoldMembers.length);
+      return randomGoldMembers.concat(randomSilverMembers);
+    }
+
+    function getRandomElements(array, numElements) {
+      const shuffledArray = array.sort(() => Math.random() - 0.5);
+      return shuffledArray.slice(0, numElements);
+    }
+
+    function displaySpotlightMembers() {
+      const spotlightMembers = getRandomMembers(3);
+      const spotlightContainer = document.querySelector(".spotlight-container");
+
+      spotlightMembers.forEach(member => {
+        const memberDiv = document.createElement("div");
+        memberDiv.classList.add("spotlight-member");
+
+        const memberName = document.createElement("h3");
+        memberName.textContent = member.name;
+
+        const memberDescription = document.createElement("p");
+        memberDescription.textContent = member.description;
+
+        memberDiv.appendChild(memberName);
+        memberDiv.appendChild(memberDescription);
+        spotlightContainer.appendChild(memberDiv);
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      displaySpotlightMembers();
+    });
+  </script>
+</body>
+
+</html>
