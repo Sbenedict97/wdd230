@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bountiful Foods</title>
+  <link rel="stylesheet" href="styles/base.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-logo">
+      <img src="images/logo.png" alt="Logo">
+      <h1>Bountiful Foods</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fresh.html">Fresh</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="attribution.html">Attribution</a></li>
+      </ul>
+    </nav>
+    <div class="contact-info">
+      <p>Phone: (123) 456-7890</p>
+      <p>Email: info@bountifulfoods.com</p>
+    </div>
+    <div class="social-media-links">
+      <a href="facebook.com"><img src="images/facebook.png" alt="Facebook" width="30" height="30"></a>
+      <a href="twitter.com"><img src="images/twitter.png" alt="Twitter" width="30" height="30"></a>
+    </div>
+  </header>
+
+
+  <section class="hero">
+    <div class="hero-image"></div>
+    <img src="images/hero.jpg" alt="Fruit Stand">
+    <div class="hero-content">
+      <h1>Welcome to Bountiful Foods</h1>
+      <p>Discover the freshest organic produce and specialty fruit drinks</p>
+      <a href="fresh.html" class="cta-button">Make Your Own Fruit Drink</a>
+    </div>
+  </section>
+
+  <section class="weather">
+    <div class="weather-card">
+      <h2 id="city-name"></h2>
+      <p>Temperature: <span id="temperature"></span></p>
+      <p>Condition: <span id="condition"></span></p>
+      <p>Humidity: <span id="humidity"></span></p>
+    </div>
+  </section>
+
+  <section class="drinks-summary">
+    <div class="drink-info">
+      <h3>Your Specialty Drinks</h3>
+      <p>Total submitted drinks: <span id="submitted-drinks">5</span></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Last modified: <span id="last-modified-date"></span></p>
+    <p> 2023, Skyler Benedict</p>
+    <a href="attribution.html">Resource/Attribution</a>
+  </footer>
+
+  <script src="jv/script.js"></script>
+  <script src="jv/weather.js"></script>
+</body>
+
+</html>
