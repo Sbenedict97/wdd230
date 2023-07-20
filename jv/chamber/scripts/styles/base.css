@@ -147,11 +147,11 @@ ul.nav-links li a:hover {
   align-items: center;
 }
 
-.weather-info img {
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
+.weather-info {
+  max-width: 100%;
+  height: auto;
 }
+
 
 .temperature {
   font-size: 2em;

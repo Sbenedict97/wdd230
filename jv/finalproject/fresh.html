@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bountiful Foods</title>
+  <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+  <header>
+    <div class="header-logo">
+      <img src="images/logo.png" alt="Logo">
+      <h1>Bountiful Foods</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="fresh.html">Fresh</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="attribution.html">Attribution</a></li>
+      </ul>
+    </nav>
+    <div class="contact-info">
+      <p>Phone: (123) 456-7890</p>
+      <p>Email: info@bountifulfoods.com</p>
+    </div>
+    <div class="social-media-links">
+      <a href="facebook.com"><img src="images/facebook.png" alt="Facebook" width="30" height="30"></a>
+      <a href="twitter.com"><img src="images/twitter.png" alt="Twitter" width="30" height="30"></a>
+    </div>
+  </header>
+  
+
+  <section class="fresh-section">
+    <h1>Build Your Own Specialty Drink</h1>
+    <form id="drink-form">
+      <div class="form-group">
+        <label for="first-name">First Name:</label>
+        <input type="text" id="first-name" name="first-name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="fruit1">Select Fruit 1:</label>
+        <select id="fruit1" name="fruit1" required>
+          <option value="">-- Select Fruit --</option>
+          <option value="Apple">Apple</option>
+          <option value="Banana">Banana</option>
+          <option value="Orange">Orange</option>
+          <option value="Pineapple">Pineapple</option>
+          <option value="Mango">Mango</option>
+          <option value="Strawberry">Strawberry</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fruit2">Select Fruit 2:</label>
+        <select id="fruit2" name="fruit2" required>
+          <option value="">-- Select Fruit --</option>
+          <option value="Apple">Apple</option>
+          <option value="Banana">Banana</option>
+          <option value="Orange">Orange</option>
+          <option value="Pineapple">Pineapple</option>
+          <option value="Mango">Mango</option>
+          <option value="Strawberry">Strawberry</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="fruit3">Select Fruit 3:</label>
+        <select id="fruit3" name="fruit3" required>
+          <option value="">-- Select Fruit --</option>
+          <option value="Apple">Apple</option>
+          <option value="Banana">Banana</option>
+          <option value="Orange">Orange</option>
+          <option value="Pineapple">Pineapple</option>
+          <option value="Mango">Mango</option>
+          <option value="Strawberry">Strawberry</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="special-instructions">Special Instructions:</label>
+        <textarea id="special-instructions" name="special-instructions" rows="4"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <div id="order-output"></div>
+  </section>
+
+  <footer>
+    <p>Last modified: <span id="last-modified-date"></span></p>
+    <p> 2023, Skyler Benedict</p>
+    <a href="attribution.html">Resource/Attribution</a>
+  </footer>
+
+  <script src="jv/script.js"></script>
+</body>
+</html>

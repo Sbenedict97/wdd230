@@ -1,15 +1,18 @@
-/* medium.css */
-
 body {
   font-family: Arial, sans-serif;
-  margin: 0; 
+  margin: 0;
 }
 
 header {
   background-color: #222;
   color: #fff;
   padding: 10px 20px;
-}  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+}
 
 h1,
 h2,
@@ -20,12 +23,14 @@ h3 {
 h1.site-name {
   font-size: 1.5em;
   margin-left: 10px;
-}  
+}
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 2;
 }
 
 ul.nav-links {
@@ -49,13 +54,11 @@ ul.nav-links li a {
   transition: background-color 0.3s ease;
   padding: 5px 10px;
   border-radius: 5px;
-}  
+}
 
 ul.nav-links li a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
-
-/* Additional styles */  
 
 .social-media-links img {
   width: 30px;
@@ -97,9 +100,10 @@ ul.nav-links li a:hover {
   align-items: center;
   text-align: center;
   color: #fff;
-  margin-top: 100px; /* Add top margin to create space */
+  margin-top: 100px;
+  position: relative;
+  z-index: 1;
 }
-
 
 .hero-title {
   font-size: 3em;
@@ -112,44 +116,6 @@ ul.nav-links li a:hover {
   margin: 0;
   margin-bottom: 20px;
 }
-
-@media screen and (min-width: 768px) {
-  .header-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1;
-  }
-  
-  .hero-image {
-    height: calc(100vh - 100px); /* Adjust the height as needed */
-    margin-top: 100px;
-    margin-bottom: 50px; /* Add a margin to create space at the bottom of the hero image */
-    overflow: hidden;
-  }
-  .hero-image img {
-    width: 100%;
-    height: auto;
-  }
-  .hero-title {
-    font-size: 3rem;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  /* Add the following rule */
-  main {
-    padding-bottom: 100px; /* Add a padding at the bottom of the main content to make room for the hero image */
-  }
-}
-
-  .hero-description {
-    font-size: 2em;
-  }
-
 
 .news,
 .events,
@@ -180,10 +146,9 @@ ul.nav-links li a:hover {
   align-items: center;
 }
 
-.weather-info img {
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
+.weather-info {
+  max-width: 200px; /* Adjust the width as per your preference */
+  height: auto;
 }
 
 .temperature {
@@ -233,7 +198,6 @@ ul.nav-links li a:hover {
   color: #ccc;
 }
 
-/* Additional rules */
 #weather-summary {
   border: 1px solid #ccc;
   padding: 20px;
@@ -257,4 +221,21 @@ ul.nav-links li a:hover {
 h1 {
   font-size: 32px;
   margin-bottom: 20px;
+}
+
+/* Additional styles for medium screens */
+@media screen and (min-width: 768px) {
+  header {
+    padding-top: 40px; /* Increase the top padding to create space */
+  }
+
+  .hero-image {
+    height: calc(100vh - 140px); /* Adjust the height to account for the header */
+    margin-top: 140px; /* Increase the margin to create space */
+    margin-bottom: 50px;
+  }
+
+  main {
+    padding-top: 20px; /* Add top padding to create space for the fixed header */
+  }
 }
