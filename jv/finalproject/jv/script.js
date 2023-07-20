@@ -66,4 +66,20 @@ function updateLastModifiedDate() {
     const form = document.getElementById("drink-form");
     form.addEventListener("submit", handleFormSubmission);
   });
+  document.getElementById('drink-form').addEventListener('submit', function (event) {
+    event.preventDefault();
   
+    const firstName = document.getElementById('first-name').value;
+    const fruit1 = document.getElementById('fruit1').value;
+    const fruit2 = document.getElementById('fruit2').value;
+    const fruit3 = document.getElementById('fruit3').value;
+  
+    const orderedDrink = `Fruit Drink with ${fruit1}, ${fruit2}, and ${fruit3}`;
+    const orderOutput = document.getElementById('order-output');
+    const newParagraph = document.createElement('p');
+    newParagraph.textContent = orderedDrink;
+    orderOutput.appendChild(newParagraph);
+  
+    // Clear the form after submission
+    document.getElementById('drink-form').reset();
+  });
